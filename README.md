@@ -2,7 +2,7 @@
 
 Euler2D is a compact unstructured finite volume solver for the two-dimensional Euler equations. The code is solely based on the standard library, so no extra packages are necessary. The current version has only been tested on windows.
 
-Installation
+**Installation**
 
 There are 2 options:
 
@@ -11,13 +11,13 @@ There are 2 options:
 2: Compile it yourself. Since no external packages are used, installing is easy. First make sure that you have a c++ compiler installed for windows. For this project, MinGW was used in the development. The compilation is done from a makefile. So to compile it, simply open the command prompt, go to the Euler2D directory, type mingw32-make and press enter.
 
 
-Running a Simulation
+**Running a Simulation**
 
 There are already 3 simulation setups given in the test directory. To run a testcase, invoke the executable followed by the location of the input file of your simulation. Example: (assuming you are in the main directory Euler2D)
 
 ' "app/euler.exe" test/shockTube/input.euler'
 
-How to setup a simulation
+**How to setup a simulation**
 
 To set up a simulation, you need to have three files in your simulation directory. You need to have an input file, a boundary file, and a mesh in vtk format. 3 examples are stored in the "test" directory of this project.
 
