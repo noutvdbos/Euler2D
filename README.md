@@ -41,34 +41,34 @@ freestream		u,v,rho,p
 wall			None
 
 
-Examples:
+**Examples:**  
+```
+//First boundary  
 
-//First boundary
+Inlet  
+{  
+key   1			//<- key given in mesh file  
+type  supersonicInlet	//<- type of boundary condition  
+u     3			//<- inlet values for u,v,rho,p  
+v     0  
+rho   1.4  
+p     1  
+}  
 
-Inlet
-{
-key   1			//<- key given in mesh file
-type  supersonicInlet	//<- type of boundary condition
-u     3			//<- inlet values for u,v,rho,p
-v     0
-rho   1.4
-p     1
-}
+//Second boundary  
 
-//Second boundary
+Top Wall   
+{  
+key   2			//<- key given in mesh file  
+type  wall		//<- type of boundary condition  
+}			//no values need to be specified  
 
-Top Wall
-{
-key   2			//<- key given in mesh file
-type  wall		//<- type of boundary condition
-}			//no values need to be specified
+//Third boundary    
+  
+Outlet    
+{  
+key   3  
+type  supersonicOutlet    
+}  
 
-//Third boundary
-
-Outlet
-{
-key   3
-type  supersonicOutlet
-}
-
-
+```
