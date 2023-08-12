@@ -1,0 +1,44 @@
+
+//First boundary
+
+Inlet
+{
+key   1
+type  supersonicInlet
+u     3
+v     0
+rho   1.4
+p     1
+}
+
+//Second boundary
+
+Top Wall
+{
+key   2
+type  wall
+}
+
+//Third boundary
+
+Outlet
+{
+key   3
+type  supersonicOutlet
+}
+
+// Fourth boundary
+
+Bottom Wall
+{
+key 	4
+type 	wall 
+}
+
+// Fifth boundary
+
+Bottom Wall 2
+{
+key 	5
+type 	wall 
+}

@@ -1,0 +1,48 @@
+
+//First boundary
+
+Inlet
+{
+key   1
+type  subsonicInlet
+u   0.19923893961
+v   0.01743114854
+rho   1.4
+}
+
+//Second boundary
+
+Top Wall
+{
+key   2
+type  subsonicOutlet
+p 	  1
+}
+
+//Third boundary
+
+Outlet
+{
+key   3
+type  subsonicOutlet
+p 	  1
+}
+
+// Fourth boundary
+
+Bottom Wall
+{
+key 	4
+type  subsonicInlet
+u   0.19923893961
+v   0.01743114854
+rho   1.4
+}
+
+// Fifth boundary
+
+Airfoil
+{
+key 	5
+type 	wall 
+}

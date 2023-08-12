@@ -1,0 +1,54 @@
+
+//MESH
+
+meshFile 			mesh.vtk   			//relative to current directory
+boundaryFile        boundaries.dat		//relative to current directory
+
+
+
+//TIME
+
+startTime 			0					
+endTime				200
+timeStep  			0.0025
+adjustTimeStep    	false 				//[true,false]
+maxCourant 			0.5 				//only used if adjustTimeStep is true;
+
+
+
+//INITIAL CONDITIONS, Mach 0.2 at angle of attack of 5 degrees
+
+initMethod 			file 			//[uniform/file]
+initFile			base_results.vtk 				
+rho 				1.4		 			
+p   				1
+u   				0.19923893961
+v   				0.01743114854
+specificHeatRatio	1.4					//always a float
+
+
+//REFERENCE CONDITIONS, only necessary when you want to output force and pressure coefficients
+
+rhoref 				1.4 // reference density
+pref				1   // reference pressure for non-dimensional quantities
+Vref				0.2 // reference velocity magnitude
+lref 				1   // reference length
+
+
+//SOLVER
+
+timeScheme          explicitEuler
+fluxScheme 			AUSM+
+
+//RESULTS
+
+resultsFolder 		results				//relative to current directory
+resultsPrefix 		results
+
+writeMethod 		iteration    		//[time,iteration]
+writeInterval 		500 				//float in case time is selected,
+										//integer in case iteration is selected
+								
+writeCoefficients   true 				// [true,false] writes out the force and pressure coefficients if set to true
+selectedBoundaries 	Airfoil			    // specifies for which boundaries the coefficients are written out, delimited by commas. 
+	

@@ -1,0 +1,32 @@
+
+//First boundary
+
+Left
+{
+key   1
+type  supersonicOutlet
+}
+
+//Second boundary
+
+Top Wall
+{
+key   2
+type  wall
+}
+
+//Third boundary
+
+Right
+{
+key   3
+type  supersonicOutlet
+}
+
+// Fourth boundary
+
+Bottom Wall
+{
+key 	4
+type 	wall 
+}

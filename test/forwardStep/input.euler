@@ -1,0 +1,50 @@
+
+//MESH
+
+meshFile 			mesh.vtk   			//relative to current directory
+boundaryFile        boundaries.dat		//relative to current directory
+
+
+
+//TIME
+
+startTime 			0					
+endTime				4
+timeStep  			0.0002
+adjustTimeStep    	true 				//[true,false]
+maxCourant 			0.2 				//only used if adjustTimeStep is true;
+
+
+
+//INITIAL CONDITIONS
+
+initMethod 			uniform 			//[uniform/file]
+rho 				1.4		 			
+p   				1
+u   				3
+v   				0
+specificHeatRatio	1.4					//always a float
+
+//REFERENCE CONDITIONS
+
+rhoref 				1.4 // reference density
+pref				1   // reference pressure for non-dimensional quantities
+Vref				3   // reference velocity magnitude
+lref 				1   // reference length
+
+//SOLVER
+
+timeScheme          explicitEuler
+fluxScheme 			AUSM+
+
+//RESULTS
+
+resultsFolder 		results				//relative to current directory
+resultsPrefix 		results
+
+writeMethod 		time    		//[time,iteration]
+writeInterval 		0.1				//float in case time is selected,
+									//integer in case iteration is selected
+
+writeCoefficients   false 								// [true,false] writes out the force and pressure coefficients if set to true
+selectedBoundaries 	Top Wall, Bottom Wall			    // specifies for which boundaries the coefficients are written out, delimited by commas. 
