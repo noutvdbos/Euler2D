@@ -41,7 +41,7 @@ freestream		u,v,rho,p
 wall			None
 
 
-**Examples:**  
+**Boundary Condition Examples:**  
 ```
 //First boundary  
 
@@ -65,10 +65,31 @@ type  wall		//<- type of boundary condition
 
 //Third boundary    
   
-Outlet    
+Outlet
 {  
 key   3  
 type  supersonicOutlet    
 }  
 
 ```
+
+
+# Testcases Results
+
+**Sod's Shocktube**  
+Testing Sod's shocktube shows close results w.r.t the analytical solution. It can be noted that Euler2D shows some dissipation, which is due to the fact that it employs a first order upwind scheme, namely AUSM+.
+
+![sods_shocktube_paraview](https://github.com/noutvdbos/Euler2D/assets/28824914/0c973cad-98a1-4c36-b6b2-e9c9b90de528)
+![sods_shocktube](https://github.com/noutvdbos/Euler2D/assets/28824914/f8a5ae4b-f507-486e-849a-f2dbca791551)
+
+**Forward Step at Mach 3**  
+
+For the forward step case, we again see some dissipation of the shockwaves. Overall, the shockwave pattern matches closely to solutions as shown in literature. 
+
+![forwardstep](https://github.com/noutvdbos/Euler2D/assets/28824914/7db23054-e1c5-43a3-853e-f10e961429a7)
+
+**Naca0012 Profile at Mach 0.2**  
+
+At Mach 0.2, a lift coefficient of 0.533 was calculated by Euler2D. According to thin airfoil theory, it should have a lift coefficient of 0.548. Giving a deviation of roughly 2 lift-counts.
+
+![naca0012_rescaled](https://github.com/noutvdbos/Euler2D/assets/28824914/87037d1b-13aa-46cb-8cb6-71210a163e6a)
